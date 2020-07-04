@@ -115,21 +115,27 @@ color: #111;
 }
 
 .song_list{
-  width: 65%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   height:450px;
   overflow: auto;
   border: 5px solid red;
   border-radius: 10px;
-  padding: 10px;
   display: grid;
   grid-template-columns: repeat(6,1fr);
-  grid-template-rows: minmax(100px,auto);
+  grid-template-rows: 50px;
 }
 
-#music_list{
+.music_list{
   color:red;
+  padding:15px;
+}
+
+.music_header{
+  color:green;
+  padding:15px;
+  grid-template-rows: 50px;
 }
 
 #queryheader h1{
