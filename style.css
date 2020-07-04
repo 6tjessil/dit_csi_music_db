@@ -114,28 +114,38 @@ color: #111;
   color: #111;
 }
 
-.song_list{
+.data{
   width: 60%;
   margin-left: auto;
   margin-right: auto;
   height:450px;
   overflow: auto;
-  border: 5px solid red;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  grid-template-rows: 50px;
 }
 
-.music_list{
-  color:red;
-  padding:15px;
+table{
+   border-collapse: collapse;
+   width: 100%;
+   text-align: center; 
+   padding:10px;
 }
 
-.music_header{
-  color:green;
-  padding:15px;
-  grid-template-rows: 50px;
+tr{
+  color: black;
+  height:50px;
+}
+
+td{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+tr:nth-child(odd){
+  background-color:lightgray; 
+}
+
+th{
+  height:50px;
+  width:100px;
 }
 
 #queryheader h1{
