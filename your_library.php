@@ -17,8 +17,11 @@
 		<div class = "sidebar">
 		fghjkl;cfghjkl;	
 		</div>
-		<div class="blank">
-		jjjjjjjjjjj
+		<div class="image">
+		image
+		</div>
+		<div class="playlist_details">
+		playlist_details
 		</div>
 		<div class = "music_data_div">
 			<div class="data">
@@ -50,4 +53,4 @@
 	</div>
 </body>
 
-</html>z
+</html>

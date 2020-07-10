@@ -199,24 +199,45 @@ th{
   background-color: green;
 }
 #your_library_content{
-  background-color:red;
   height:600px; 
+  grid-template-columns: repeat(10, 10%);
+  grid-template-rows: auto;
   display: grid;
 }
 
 .music_data_div{
-  grid-area: data;
-  width: 500px;
-  height:200px;
+  height:225px;
+  border: 5px solid black;
+  grid-row: 4/5;
+  grid-column: 3/10;
+  overflow: auto;
 }
 
 .sidebar{
-  background: lightcoral;
-  grid-area: sidebar;
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column: 1/2;
+  height:500px;
+  width:150px;
+  border: 5px solid black;
 }
 
-.blank{
-  background-color: white;
-  grid-area: blank;
+.image{
+  width: 250px;
+  height:250px;
+  grid-row: 2/3;
+  grid-column: 3/4;
+  border: 5px solid black;
 }
+
+.playlist_details{
+  width: 250px;
+  height:100px;
+  margin-top: 100px;
+  grid-row: 2/3;
+  grid-column: 5/6;
+  border: 5px solid black;
+}
+
+
 
