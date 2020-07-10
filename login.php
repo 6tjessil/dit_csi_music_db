@@ -38,25 +38,29 @@ session_start();
   <?php
   require("nav.php")
   ?>
-
-  <div id="main">
-    <h1><span class='light'>Teacher_Level 3 - FORMS - </span>LOGIN FOR USERS</h1>
-  </div>
-  <div id="container">
-    <div id="fcontent">
-      <div align="center">
-        <h2>
-          <form action="" method="post" id="login">
-            <label id="login">Username: </label><input type="text" name="username" id="box" placeholder="Please enter a username" /><br />
-            <label id="login">Password: </label><input type="password" name="password" id="box" placeholder="Please enter a passoword" /><br />
-            <input type="submit" value="Submit" /><br />
-          </form>
-        </h2>
-        <?php echo $error; ?>
-      </div>
+  <!-- The Modal -->
+  <div id="id01" class="modal">
+    <div id = "login_modal">
+      <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
+      <h1>Login</h1>
+      <form action="" method="post" id="login">
+        <p>Username</p><input type="text" name="username" id="box" placeholder="Please enter a username" /><br />
+        <p>Password</p><input type="password" name="password" id="box" placeholder="Please enter a password" /><br />
+        <input type="submit" value="Login"/><br/>
+      </form>  
     </div>
   </div>
-
 </body>
+<script src="script.js"></script>
 
 </html>
+
+<!--<div id = login_modal>
+    <div id = "modal_content">
+      <form action="" method="post" id="login">
+        <label id="login">Username: </label><input type="text" name="username" id="box" placeholder="Please enter a username" /><br />
+        <label id="password">Password: </label><input type="password" name="password" id="box" placeholder="Please enter a password" /><br />
+        <input type="submit" value="Submit" /><br/>
+      </form>
+    </div>
+  </div>-->
