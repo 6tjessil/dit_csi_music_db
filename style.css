@@ -115,10 +115,10 @@ color: #111;
 /*mUSIC DATA DIV CONTENT*/
 
 .data{
-  width: 60%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height:450px;
+  height:100%;
   overflow: auto;
 }
 
@@ -146,6 +146,7 @@ tr:nth-child(odd){
 th{
   height:50px;
   width:100px;
+  position: static;
 }
 
 #queryheader h1{
@@ -213,8 +214,6 @@ th{
 
 .grid-content{
   background-color: green;
-<<<<<<< Updated upstream
-=======
 }
 /*STYLING YOUR LIBRARY PAGE*/
 
@@ -342,15 +341,4 @@ h1{
 .close:focus {
   color: red;
   cursor: pointer;
-}
-
-button{
-  background-color:black;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
->>>>>>> Stashed changes
 }

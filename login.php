@@ -32,6 +32,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -51,16 +52,5 @@ session_start();
     </div>
   </div>
 </body>
-<script src="script.js"></script>
 
 </html>
-
-<!--<div id = login_modal>
-    <div id = "modal_content">
-      <form action="" method="post" id="login">
-        <label id="login">Username: </label><input type="text" name="username" id="box" placeholder="Please enter a username" /><br />
-        <label id="password">Password: </label><input type="password" name="password" id="box" placeholder="Please enter a password" /><br />
-        <input type="submit" value="Submit" /><br/>
-      </form>
-    </div>
-  </div>-->
