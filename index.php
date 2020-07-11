@@ -13,7 +13,12 @@
   <?php
   require("nav.php")
   ?>
-  home page
+homepage
+<?php
+  require("login_form.php");
+  require('signup_form.php');
+  ?>
+
 </body>
 
 </html>

@@ -14,6 +14,10 @@
   require("nav.php")
   ?>
   contact page
+  <?php
+  require("login_form.php");
+  require('signup_form.php');
+  ?>
 </body>
 
 </html>
