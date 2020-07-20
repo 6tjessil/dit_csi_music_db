@@ -1,6 +1,5 @@
-<!--Login Page-->
-
 <?php
+//Login Page
 session_start();
     $error = null;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,11 +16,11 @@ session_start();
 
     if ($count == 1) {
         $_SESSION['login_user'] = $myusername;
-        header("location: index.php");
+        //header("location: index.php");
     } else {
         $error = "Your login name or password is invalid";
-        header("location: index.php");
+        echo $error;
+        //header("location: index.php");
     }
     }
 ?>
-

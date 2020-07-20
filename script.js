@@ -29,4 +29,31 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 
 function signupform(){
   document.getElementById('signup_form').style.display='block'
+<<<<<<< Updated upstream
 }
+=======
+}
+
+
+$(function(){
+  $("#login_form").submit(function(e){
+    e.preventDefault()
+    myusername = $("#username").val()
+    mypassword = $("#password").val()
+    $.ajax({
+      type:"POST",
+      url:"login.php",
+      data:{username:myusername, password:mypassword},
+      success: function(data){
+        if (data.trim() != ""){
+          document.getElementById("error").innerHTML = data
+        }
+        else{
+          window.location.reload()
+        }
+        
+      }
+    })
+  })
+})
+>>>>>>> Stashed changes
