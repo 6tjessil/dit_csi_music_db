@@ -8,7 +8,7 @@
       <p>Password</p>
       <input type = "password" name = "password" placeholder="Please enter your password" id="password"> 
       <input type = "submit" name = "submit" value= "Login">
-      <p id="error"> </p>
+      <p id="loginform_message"> </p>
     </form>
   </div>
 </div>

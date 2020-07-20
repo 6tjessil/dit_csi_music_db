@@ -4,10 +4,11 @@
     <h1>Sign Up</h1>
     <form method = "POST" action = "signup.php">
       <p>Username</p>
-      <input type = "text" name = "UserName" placeholder="Please enter a username">
+      <input type = "text" name = "UserName" placeholder="Please enter a username" id="UserName" required>
       <p>Password</p>
-      <input type = "password" name = "Password" placeholder="Please enter a password">
+      <input type = "password" name = "Password" placeholder="Please enter a password" id = "Password" required>
       <input type = "submit" name = "submit" value= "Register">
+      <p id="signupform_message"> </p>
     </form>
   </div>
 </div>

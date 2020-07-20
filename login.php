@@ -1,7 +1,7 @@
 <?php
 //Login Page
 session_start();
-    $error = null;
+    $output_message = null;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once('connect.php');
     $myusername = mysqli_real_escape_string($con, $_POST['username']);
@@ -18,8 +18,8 @@ session_start();
         $_SESSION['login_user'] = $myusername;
         //header("location: index.php");
     } else {
-        $error = "Your login name or password is invalid";
-        echo $error;
+        $output_message = "Your login name or password is invalid";
+        echo $output_message;
         //header("location: index.php");
     }
     }

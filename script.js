@@ -29,9 +29,6 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 
 function signupform(){
   document.getElementById('signup_form').style.display='block'
-<<<<<<< Updated upstream
-}
-=======
 }
 
 
@@ -46,14 +43,34 @@ $(function(){
       data:{username:myusername, password:mypassword},
       success: function(data){
         if (data.trim() != ""){
-          document.getElementById("error").innerHTML = data
+          document.getElementById("loginform_message").innerHTML = data
         }
         else{
           window.location.reload()
         }
-        
       }
     })
   })
 })
->>>>>>> Stashed changes
+
+$(function(){
+  $("#signup_form").submit(function(e){
+    e.preventDefault()
+    newusername = $("#UserName").val()
+    newpassword = $("#Password").val()
+    $.ajax({
+      type:"POST",
+      url:"signup.php",
+      data:{UserName:newusername, Password:newpassword},
+      success: function(data){
+        if (data.trim() != ""){
+          document.getElementById("signupform_message").innerHTML = data
+        }
+        else{
+          document.getElementById("signupform_message").innerHTML = data
+          window.location.reload()
+        }
+      }
+    })
+  })
+})
