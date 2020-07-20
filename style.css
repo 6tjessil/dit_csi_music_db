@@ -9,6 +9,7 @@
 
 body{
   font-family:arial;
+<<<<<<< Updated upstream
   background:#141414;
   color:white;
 }
@@ -17,6 +18,17 @@ nav {
   height: 61px;
   grid-column:1/9;
   background-color:#080808;
+=======
+  background-color: #111010;
+  color:white;
+}
+
+
+nav { /*Nav bar */
+  height: 61px;
+  grid-column:1/9;
+  background-color: #080808;
+>>>>>>> Stashed changes
 }
 
 .nav-title {
@@ -29,9 +41,13 @@ nav {
 
 .mainlinks{
   font-family: 'Varela Round';
+<<<<<<< Updated upstream
   background-color:var(--accent-color);
+=======
+  background-color:#080808;
+>>>>>>> Stashed changes
   margin-left:auto;
-  width:450px;
+  width:600px;
 }
 
 .mainlinks li a{ 
@@ -42,7 +58,11 @@ nav {
 }
 .mainlinks li{ 
   list-style:none;
+<<<<<<< Updated upstream
   background-color:var(--accent-color);
+=======
+  background-color:#080808;
+>>>>>>> Stashed changes
   display:inline-block;
   text-decoration:none;
 }
@@ -117,7 +137,7 @@ table{
 }
 
 tr{
-  color: black;
+  color: white;
   height:50px;
 }
 
@@ -127,7 +147,7 @@ td{
 }
 
 tr:nth-child(odd){
-  background-color:lightgray; 
+  background-color:#141414; 
 }
 
 th{
@@ -204,10 +224,11 @@ th{
 /*stores the tables used to display data*/
 .music_data_div{
   height:600px;
-  border: 5px solid black;
+  background-color: #080808;
   grid-row: 4/5;
   grid-column: 3/10;
   overflow: auto;
+  color:white;
 }
 /*styling the sidebar*/
 .sidebar{
@@ -216,7 +237,7 @@ th{
   grid-column: 1/2;
   height:500px;
   width:150px;
-  border: 5px solid black;
+  background-color: #080808;
 }
 /*styling the playlist image*/
 .image{
@@ -224,7 +245,7 @@ th{
   height:250px;
   grid-row: 2/3;
   grid-column: 3/4;
-  border: 5px solid black;
+  background-color: #080808;
 }
 /*styling the playlist details section*/
 .playlist_details{
@@ -233,13 +254,13 @@ th{
   margin-top: 100px;
   grid-row: 2/3;
   grid-column: 5/6;
-  border: 5px solid black;
+  background-color: #080808;
 }
 /*styling the popup login form*/
 .login_box{
   width: 320px;
   height: 420px;
-  background-color: black;
+  background-color: #080808;
   color: white;
   top: 50%;
   left: 50%;
@@ -328,6 +349,7 @@ th{
   cursor: pointer;
 }
 
+<<<<<<< Updated upstream
 /*styling the dark/light mode toogle*/
 /*primary = background color
   accent = color of nav and other elements
@@ -404,3 +426,9 @@ input:checked + .slider:before {
 
 
 
+=======
+.dark-mode {
+  background-color: white;
+  color: black;
+}
+>>>>>>> Stashed changes

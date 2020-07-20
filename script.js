@@ -56,3 +56,32 @@ if(currentTheme){
 }
 
 
+<<<<<<< Updated upstream
+=======
+$(function(){
+  $("#signup_form").submit(function(e){
+    e.preventDefault()
+    newusername = $("#UserName").val()
+    newpassword = $("#Password").val()
+    $.ajax({
+      type:"POST",
+      url:"signup.php",
+      data:{UserName:newusername, Password:newpassword},
+      success: function(data){
+        if (data.trim() != ""){
+          document.getElementById("signupform_message").innerHTML = data
+        }
+        else{
+          document.getElementById("signupform_message").innerHTML = data
+          window.location.reload()
+        }
+      }
+    })
+  })
+})
+
+function theme() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+>>>>>>> Stashed changes
