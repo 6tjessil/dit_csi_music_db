@@ -5,19 +5,6 @@
     $username = $_POST['UserName']; 
     $password = $_POST['Password'];
     
-<<<<<<< Updated upstream
-    $insertquery = "INSERT INTO useraccount(`username`, `password`) VALUES ('{$username}','{$password}');";
-    
-    if (mysqli_query($con,$insertquery))
-    {
-    header('nav.php');
-    header("location: index.php");
-    echo "<h3>Record inserted</h3>";
-    }
-    else
-    {
-    echo "<h3>Error inserting record:</h3> ";
-=======
     $checkquery = "SELECT * FROM user WHERE username = '$username'"; //Checks if username exsits
     $insertquery = "INSERT INTO user(`username`, `password`) VALUES ('$username','$password')"; //Inserts new user data
                 
@@ -32,7 +19,6 @@
         $output_message = "Registration Successful";
 
         echo $output_message;
->>>>>>> Stashed changes
     }
 ?>
 

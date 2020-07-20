@@ -9,16 +9,6 @@
 
 body{
   font-family:arial;
-<<<<<<< Updated upstream
-  background:#141414;
-  color:white;
-}
-/*nav bar settings*/
-nav { 
-  height: 61px;
-  grid-column:1/9;
-  background-color:#080808;
-=======
   background-color: #111010;
   color:white;
 }
@@ -28,7 +18,6 @@ nav { /*Nav bar */
   height: 61px;
   grid-column:1/9;
   background-color: #080808;
->>>>>>> Stashed changes
 }
 
 .nav-title {
@@ -41,11 +30,7 @@ nav { /*Nav bar */
 
 .mainlinks{
   font-family: 'Varela Round';
-<<<<<<< Updated upstream
-  background-color:var(--accent-color);
-=======
   background-color:#080808;
->>>>>>> Stashed changes
   margin-left:auto;
   width:600px;
 }
@@ -58,11 +43,7 @@ nav { /*Nav bar */
 }
 .mainlinks li{ 
   list-style:none;
-<<<<<<< Updated upstream
-  background-color:var(--accent-color);
-=======
   background-color:#080808;
->>>>>>> Stashed changes
   display:inline-block;
   text-decoration:none;
 }
@@ -349,7 +330,6 @@ th{
   cursor: pointer;
 }
 
-<<<<<<< Updated upstream
 /*styling the dark/light mode toogle*/
 /*primary = background color
   accent = color of nav and other elements
@@ -421,14 +401,11 @@ input:checked + .slider:before {
 }
 */
 
-
-
-
-
-
-=======
 .dark-mode {
   background-color: white;
   color: black;
 }
->>>>>>> Stashed changes
+
+
+
+

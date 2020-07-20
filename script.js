@@ -56,8 +56,6 @@ if(currentTheme){
 }
 
 
-<<<<<<< Updated upstream
-=======
 $(function(){
   $("#signup_form").submit(function(e){
     e.preventDefault()
@@ -84,4 +82,3 @@ function theme() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
->>>>>>> Stashed changes
