@@ -19,6 +19,7 @@ function openOption(evt, optionName) {
   evt.currentTarget.className += " active";
 }
 
+
 document.getElementById("loginbtn").addEventListener("click", loginform);
 
 function loginform(){
@@ -29,9 +30,9 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 
 function signupform(){
   document.getElementById('signup_form').style.display='block'
-<<<<<<< Updated upstream
+
 }
-=======
+
 }
 
 const toggleSwitch = document.querySelector('.theme-switch input[type = "checkbox"]');
@@ -58,6 +59,33 @@ if(currentTheme){
 }
 
 
+$(function(){
+  $("#signup_form").submit(function(e){
+    e.preventDefault()
+    newusername = $("#UserName").val()
+    newpassword = $("#Password").val()
+    $.ajax({
+      type:"POST",
+      url:"signup.php",
+      data:{UserName:newusername, Password:newpassword},
+      success: function(data){
+        if (data.trim() != ""){
+          document.getElementById("signupform_message").innerHTML = data
+        }
+        else{
+          document.getElementById("signupform_message").innerHTML = data
+          window.location.reload()
+        }
+      }
+    })
+  })
+})
+
+function theme() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -67,5 +95,3 @@ function myFunction() {
   }
 } 
 
-
->>>>>>> Stashed changes

@@ -14,6 +14,7 @@ if(isset($_SESSION['login_user'])){?>
                 <a href="logout.php">Logout</a>
             </div>
         </div>
+        <button onclick="theme()">Toggle dark mode</button>
     </div>
 </nav><?php
 } else{?>
@@ -24,7 +25,15 @@ if(isset($_SESSION['login_user'])){?>
         <li><a href="form.php">Contact</a></li>
         <li><a href="#" id = "loginbtn">Login</a></li>
         <li><a href="#" id = "signupbtn">Sign Up</a></li>
+        <button onclick="theme()">Toggle dark mode</button>
     </div>
 </nav>
 <?php
 }?>
+
+<!--<div class = "theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>-->
