@@ -30,6 +30,9 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 
 function signupform(){
   document.getElementById('signup_form').style.display='block'
+
+}
+
 }
 
 const toggleSwitch = document.querySelector('.theme-switch input[type = "checkbox"]');
@@ -82,3 +85,13 @@ function theme() {
    var element = document.body;
    element.classList.toggle("dark-mode");
 }
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
+
