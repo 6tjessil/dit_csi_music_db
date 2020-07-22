@@ -30,34 +30,28 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 
 function signupform(){
   document.getElementById('signup_form').style.display='block'
-
 }
 
-}
-
-const toggleSwitch = document.querySelector('.theme-switch input[type = "checkbox"]');
-
-function switchTheme(e) {
-  if(e.target.checked){
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.setItem('theme', 'light');
-  }
-}
-
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-if(currentTheme){
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  if(currentTheme === 'dark'){
-    toggleSwitch.checked = true;
-  }
-
-}
-
+$(function(){
+  $("#login_form").submit(function(e){
+    e.preventDefault()
+    myusername = $("#username").val()
+    mypassword = $("#password").val()
+    $.ajax({
+      type:"POST",
+      url:"login.php",
+      data:{username:myusername, password:mypassword},
+      success: function(data){
+        if (data.trim() != ""){
+          document.getElementById("loginform_message").innerHTML = data
+        }
+        else{
+          window.location.reload()
+        }
+      }
+    })
+  })
+})
 
 $(function(){
   $("#signup_form").submit(function(e){
@@ -81,17 +75,7 @@ $(function(){
   })
 })
 
-function theme() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
 
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-} 
+}
+}
 
