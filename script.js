@@ -19,6 +19,7 @@ function openOption(evt, optionName) {
   evt.currentTarget.className += " active";
 }
 
+
 document.getElementById("loginbtn").addEventListener("click", loginform);
 
 function loginform(){
@@ -30,7 +31,6 @@ document.getElementById("signupbtn").addEventListener("click", signupform);
 function signupform(){
   document.getElementById('signup_form').style.display='block'
 }
-
 
 $(function(){
   $("#login_form").submit(function(e){
@@ -74,3 +74,8 @@ $(function(){
     })
   })
 })
+
+
+}
+}
+
