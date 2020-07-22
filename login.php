@@ -1,8 +1,7 @@
-<!--Login Page-->
-
 <?php
+//Login Page
 session_start();
-    $error = null;
+    $output_message = null;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once('connect.php');
     $myusername = mysqli_real_escape_string($con, $_POST['username']);
@@ -14,14 +13,13 @@ session_start();
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     $count = mysqli_num_rows($result);
-
+    
     if ($count == 1) {
         $_SESSION['login_user'] = $myusername;
-        header("location: index.php");
     } else {
-        $error = "Your login name or password is invalid";
-        header("location: index.php");
+        $output_message = "Your login name or password is invalid";
+        echo $output_message;
+        //header("location: index.php");
     }
     }
 ?>
-
