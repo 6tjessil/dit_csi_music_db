@@ -7,14 +7,16 @@ session_start();
     $myusername = mysqli_real_escape_string($con, $_POST['username']);
     $mypassword = mysqli_real_escape_string($con, $_POST['password']);
 
-    $sql = "SELECT username FROM user WHERE username = '$myusername' and password = '$mypassword'";
+    $hashpass = hash("sha256", $mypassword);
+
+    $sql = "SELECT username FROM user WHERE username = '$myusername' and password = '$hashpass'";
 
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     $count = mysqli_num_rows($result);
-    
-    if ($count == 1) {
+
+    if ($count == 1){
         $_SESSION['login_user'] = $myusername;
     } else {
         $output_message = "Your login name or password is invalid";
